@@ -23,7 +23,7 @@ router.get("/filter/:key", getSchemeByFilter);
 
 router
   .route("/:id")
-  .get(isAuthenticatedAdmin, getScheme)
+  .get(getScheme)
   .put(isAuthenticatedAdmin, updateScheme)
   .delete(isAuthenticatedAdmin,deleteScheme);
 
